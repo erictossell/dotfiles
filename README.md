@@ -2,9 +2,9 @@
 
 Dev environment tools and plugins
 
-[Tile Management with GlazeWM](https://github.com/lars-berger/GlazeWM)
+[Tile Management - GlazeWM](https://github.com/lars-berger/GlazeWM)
 
-[Terminal Emulator - with Wezterm](https://wezfurlong.org/wezterm/)
+[Terminal Emulator - Wezterm](https://wezfurlong.org/wezterm/)
 
 [Terminal Prompt Customization - Starship](https://starship.rs/)
 
