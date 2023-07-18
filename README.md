@@ -1,6 +1,7 @@
 # dotfiles
 
 My .config files for Windows
+[NerdFonts - M+ Code](https://www.nerdfonts.com/font-downloads)
 
 [Tile Management - GlazeWM](https://github.com/lars-berger/GlazeWM)
 
