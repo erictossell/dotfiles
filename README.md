@@ -1,6 +1,6 @@
 # dotfiles
 
-Dev environment tools and plugins
+My .config files for Windows
 
 [Tile Management - GlazeWM](https://github.com/lars-berger/GlazeWM)
 
