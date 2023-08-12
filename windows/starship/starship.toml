@@ -1,73 +1,164 @@
- 
-format = """
-[░▒▓](#77966D)\
-[   ](bg:#77966D fg:#F1E9DB)\
-[]( fg:#77966D bg:#32373B)\ 
-$directory\
-[](fg:#32373B bg:#E18335 )\
-$git_branch\
-$git_status\
-[](fg:#E18335 bg:#1A936F )\
-$nodejs\
-$rust\
-$golang\
-$php\
-$python\
-[](fg:#1A936F bg:#F1E9DB)\
-$time\
-[ ](fg:#F1E9DB)\
-\n$character"""
+
+format = '''
+[┌───────────────────>](bold green)
+[│](bold green)$all$username$character$directory$cmd_duration
+[└─>](bold green) '''
+
+scan_timeout = 10
+
+[username]
+style_user = 'green'
+style_root = 'red'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+
+[cmd_duration]
+min_time = 500
+format = 'previous took [$duration](bold yellow)'
+
+[localip]
+ssh_only = false
+format = '@[$localipv4](bold red) '
+disabled = true
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
 
 [directory]
-style = "fg:#F1E9DB bg:#32373B"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+read_only = " 󰌾"
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
 
 [git_branch]
-symbol = ""
-style = "bg:#32373B"
-format = '[[ $symbol $branch ](fg:#F1E9DB bg:#E18335)]($style)'
-
-[git_status]
-style = "bg:#32373B"
-format = '[[($all_status$ahead_behind )](fg:#F1E9DB bg:#E18335)]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:"#1A936F"
-format = '[[ $symbol ($version) ](fg:#F1E9DB bg:#1A936F)]($style)'
-
-
-[rust]
-symbol = ""
-style = "bg:#32373B"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+symbol = " "
 
 [golang]
-symbol = ""
-style = "bg:#32373B"
-format = '[[ $symbol ($version) ](fg:#F1E9DB bg:#1A936F)]($style)'
+symbol = " "
 
-[php]
-symbol = ""
-style = "bg:#32373B"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = "⌘ "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+disabled = true
+format = 'via [ $version](bold green) '
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = "🪺 "
 
 [python]
-python_binary = ["./venv/bin/python", "python3", "python", "python2"]
-symbol = ''
-style = 'bg:#1A936F'
-format = '[[ $symbol ($version) ](fg:#F1E9DB bg:#1A936F)]($style)'
+symbol = " "
 
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[   $time ](fg:#32373B bg:#F1E9DB)]($style)'
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+
+

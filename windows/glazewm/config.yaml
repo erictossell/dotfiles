@@ -10,8 +10,8 @@ bar:
   height: "40px"
   position: "top"
   opacity: 0.9
-  background: "#658e9c"
-  foreground: "#ffffff"
+  background: "#000000"
+  foreground: "#C133FF"
   font_family: "M+1Code Nerd Font"
   font_size: "15px"
   padding: "4px 6px"
@@ -19,7 +19,7 @@ bar:
   offset_y: "0"
   border_radius: "3px"
   border_width: "2px"
-  border_color: "#e18335"
+  border_color: "#C133FF"
   components_separator:
     label: " | "
   components_left:
@@ -72,6 +72,8 @@ window_rules:
   # the WM as admin.
   - command: "ignore"
     match_process_name: "Taskmgr"
+  - command: "ignore"
+    match_title: "World of Warcraft"
 
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
@@ -84,8 +86,8 @@ window_rules:
   - command: "move to workspace 3"
     match_process_name: "discord"
 
-  - command: "move to workspace 2"
-    match_process_name: "firefox"
+ 
+
 
 binding_modes:
   - name: "resize"
