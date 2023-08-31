@@ -73,7 +73,7 @@ local plugins = {
     event = "VeryLazy",
     config = function()
       require("chatgpt").setup({
-        api_key_cmd = "bw get password OpenAI"})
+        api_key_cmd = "op read op://Private/OpenAI_Cred/credential"})
     end,
     dependencies = {
       "MunifTanjim/nui.nvim",
