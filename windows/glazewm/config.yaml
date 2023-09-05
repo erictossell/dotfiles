@@ -1,32 +1,29 @@
 gaps:
-  inner_gap: 20
-  outer_gap: 20
+  inner_gap: 10
+  outer_gap: 10
 
 general:
   # Whether to show floating windows as always on top.
-  show_floating_on_top: true
+  show_floating_on_top: false
 
 bar:
-  height: "40px"
+  height: "30px"
   position: "top"
-  opacity: 0.9
-  background: "#000000"
-  foreground: "#C133FF"
-  font_family: "M+1Code Nerd Font"
-  font_size: "15px"
+  opacity: 1.0
+  background: "transparent"
+  foreground: "#ffffff"
+  font_family: "M+Code NerdFont"
+  font_size: "13px"
   padding: "4px 6px"
   offset_x: "0"
   offset_y: "0"
-  border_radius: "3px"
-  border_width: "2px"
-  border_color: "#C133FF"
-  components_separator:
-    label: " | "
+  border_radius: "10px"
   components_left:
     - type: "workspaces"
       focused_workspace_background: "#ffffff33"
       displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
+
   components_center:
     - type: "window title"
   components_right:
@@ -41,28 +38,20 @@ bar:
       margin: "0 4px 0 0"
       padding: "0 8px"
     - type: "clock"
-      # Documentation on formatting date/time string:
-      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: "hh:mm tt  ddd MMM d"
       margin: "0 0 0 10px"
 
 workspaces:
-  - name: "1"      
-    display_name: "Primary"
+  - name: "1"
     bind_to_monitor: 1
-  - name: "2"   
-    display_name: "Development"
-    bind_to_monitor: 1
-  - name: "3"   
-    display_name: "Youtube"
-    bind_to_monitor: 1
-  - name: "4"
+  - name: "2"
+    display_name: "Messaging"
     bind_to_monitor: 2
-  - name: "5"
+  - name: "3"
     bind_to_monitor: 3
-  - name: "6"   
-    display_name: "Browsing"
-    bind_to_monitor: 1
+  - name: "4"
+  - name: "5"
+  - name: "6"
   - name: "7"
   - name: "8"
   - name: "9"
@@ -72,8 +61,6 @@ window_rules:
   # the WM as admin.
   - command: "ignore"
     match_process_name: "Taskmgr"
-  - command: "ignore"
-    match_title: "World of Warcraft"
 
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
@@ -83,10 +70,9 @@ window_rules:
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
 
-  - command: "move to workspace 3"
-    match_process_name: "discord"
-
- 
+  - command: "move to workspace 2"
+    match_process_name: "discord"    # This might differ based on how Discord is recognized
+    match_class_name: "Discord"
 
 
 binding_modes:
